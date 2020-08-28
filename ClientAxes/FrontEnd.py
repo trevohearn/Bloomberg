@@ -58,6 +58,9 @@ app.layout = html.Div([ #main container
         #sector
         html.H3('Sector'),
         dcc.Input(id='sector', type='text', value='type sector', debounce=True),
+        #ticker
+        html.H3('Bond Ticker'),
+        dcc.Input(id='ticker', type='number', value='1.17', debounce=True),
         #Go button
         html.H3('Go!'),
         html.Button('Submit', id='bnt_submit')
