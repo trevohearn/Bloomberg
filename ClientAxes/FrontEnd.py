@@ -25,7 +25,8 @@ app.layout = html.Div([ #main container
                     'font-size' : '20px',
                     'padding-left' : '25%',
                     'padding-right' : '25%',
-                    'text-align' : 'center'
+                    'text-align' : 'center',
+                    'color' : 'white'
                         }
                     )
     ], style={
