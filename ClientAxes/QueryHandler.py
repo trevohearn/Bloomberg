@@ -17,8 +17,8 @@ from mysql.connector import errorcode
 db_name = 'Clients'
 
 #create cursor for database
-cnx = getConnection()
-cursor = cnx.cursor()
+# cnx = getConnection()
+# cursor = cnx.cursor()
 
 def getConnection(config):
     cnx = mysql.connector.connect(
