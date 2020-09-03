@@ -24,7 +24,7 @@ def getConnection(config):
     cnx = mysql.connector.connect(
         host = config.credentials['host'],
         user = config.credentials['user'],
-        passwd = config.credentials['passwd']
+        passwd = config.credentials['pass']
     )
 
 
