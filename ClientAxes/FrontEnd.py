@@ -14,7 +14,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 #used for events to use change page
-#from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output
 
 app = dash.Dash(__name__)
 
@@ -63,7 +63,9 @@ app.layout = html.Div([ #main container
         dcc.Input(id='ticker', type='number', value='1.17', debounce=True),
         #Go button
         html.H3('Go!'),
-        html.Button('Submit', id='bnt_submit')
+        html.Button('Submit', id='bnt_submit'),
+        #confirm notice
+        html.H3(id='confirm')
 
     ], style={
           'margin-left' : '200px',
@@ -84,5 +86,20 @@ app.layout = html.Div([ #main container
 ], style={
         'background-color' : '#b3cde0'
 })
+
+
+
+@app.callback(Output('confirm', 'children'),[
+            Input('clientName', 'value'),
+            Input('rating', 'value'),
+            Input('yield', 'value'),
+            Input('maturity', 'value'),
+            Input('sector', 'value'),
+            Input('ticker', 'value')
+]
+)
+def addClientRequest(clientName, rating, byield, maturity, sector, ticker):
+    return 'Success! Added: {}, {}. {}, {}, {}, {} to the database'.format(
+        clientName, rating, byield, maturity, sector, ticker)
 
 app.run_server(debug=True)
