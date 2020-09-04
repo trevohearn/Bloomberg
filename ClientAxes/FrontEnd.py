@@ -73,14 +73,22 @@ app.layout = html.Div([ #main container
           'padding' : '5%'
         }),
 
+    html.Div([
+        html.P('Place to output queries'),
+        dcc.Input(id='query', type='text', value='select * from table', debounce=True),
+        html.Div(id='queryOutput')
+    ],
+        style={'padding' : '1em',
+                'background-color' : '#6497b0'}),
 
     #bottom
     html.Div([
-            html.P('this is the bottom')],
+        html.P('this is the bottom')],
 
-            style={'padding' : '1em',
-                    'background-color' : '#005b96'}
-            )
+        style={'padding' : '1em',
+                'background-color' : '#005b96'
+                }
+)
 
 
 ], style={
@@ -88,7 +96,7 @@ app.layout = html.Div([ #main container
 })
 
 
-
+#take all inputs fields and add client to database using queryHandler
 @app.callback(Output('confirm', 'children'),[
             Input('clientName', 'value'),
             Input('rating', 'value'),
@@ -96,10 +104,17 @@ app.layout = html.Div([ #main container
             Input('maturity', 'value'),
             Input('sector', 'value'),
             Input('ticker', 'value')
-]
-)
+])
 def addClientRequest(clientName, rating, byield, maturity, sector, ticker):
     return 'Success! Added: {}, {}. {}, {}, {}, {} to the database'.format(
         clientName, rating, byield, maturity, sector, ticker)
+
+#query database and return table of client requests
+@app.callback(Output('queryOutput', 'children'), [
+            Input('query', 'value')
+])
+def queryDatabase(query):
+    return html.P('{}'.format(query))
+
 
 app.run_server(debug=True)
