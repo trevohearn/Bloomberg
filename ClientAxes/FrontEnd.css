@@ -1,0 +1,31 @@
+body {
+  background-color : #b3cde0;
+}
+
+h2 {
+  font-size : 20px;
+  padding-left : 25%;
+  padding-right : 25%;
+  text-align : center;
+  color : white;
+}
+
+#header {
+  background-color : #011f4b;
+  padding : 10px;
+  z-index : 1;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+}
+
+#middle {
+  margin-left : 200px;
+  background-color : #6497b1;
+  padding : 5%;
+}
+
+#footer {
+  padding : 1em;
+  background-color : #005b96;
+}
