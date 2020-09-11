@@ -50,3 +50,18 @@ h1 {
   padding : 1em;
   background-color : #005b96;
 }
+/*
+#tbl_clients {
+  font-size : 14px;
+  padding : 10px;
+  border : 1px solid black;
+}
+*/
+#tbl_clients * {
+  border : 1px solid black;
+}
+
+td {
+  font-size : 20px;
+  text-align : center;
+}
