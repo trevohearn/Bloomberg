@@ -6,45 +6,59 @@ Front facing webpage
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type='text/css' href="/assets/css/FrontEnd.css">
+    <link rel="stylesheet" type='text/css' href="FrontEnd.css"><!--/assets/css/FrontEnd.css-->
     <meta charset="UTF-8">
-    <title>BetterBids.com | Take your trades to the next level</title>
+    <title>BetterBids.com | Take your trade efficiency to the next level</title>
 </head>
   <body>
-     <!-- Main container div -->
-     <div>
-      <!-- Header -->
-      <div id='header'>
-        <h2>Client Requested Axes</h2>
+    <!-- Header -->
+    <div id='header'>
+      <h1>Client Requested Axes</h2>
+    </div>
+    <!-- Top Nav Bar -->
+    <div id='topnav_container'>
+      <a href='index.html' class='btns_topnav' title='Home'>Home</a>
+      <a href='index.html' class='btns_topnav' title='My Clients'>My Clients</a>
+      <a href='index.html' class='btns_topnav' title='My Axes'>My Axes</a>
+      <a href='index.html' class='btns_topnav' title='Statistics'>Statistics</a>
+      <a href='index.html' class='btns_topnav' title='Settings'>Settings</a>
+      <a href='index.html' class='btns_topnav' title='Help'>Help</a>
+    </div>
 
-      </div>
-      <!-- Middle Container -->
-      <div id='middle'>
-        <form action='action.py'>
+    <!-- Middle Container -->
+    <div id='middle'>
+      <form action=''>
+        <fieldset>
+          <legend>Client Name</legend>
           <label for='fname'>First Name</label>
           <input type='text' id='fname' name='fname'>
           <label for='lname'>Last Name</label>
           <input type='text' id='lname' name='lname'><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Bond Requested</legend>
           <label>Rating</label>
-          <input type='number' id='rating' name='rating'>
+          <input type='number' id='rating' name='rating'><br>
           <label>Yield</label>
-          <input type='number' id='yield' name='yield'>
+          <input type='number' id='yield' name='yield'><br>
           <label>Maturity</label>
-          <input type='number' id='maturity' name='maturity'>
+          <input type='number' id='maturity' name='maturity'><br>
           <label>Sector</label>
-          <input type='text' id='sector' name='sector'>
+          <input type='text' id='sector' name='sector'><br>
           <label>Bond ticker</label>
           <input type='number' id='ticker' name='ticker'><br><br>
-          <label>Go!</label>
+        </fieldset>
           <button id='btn_submit'>Submit</button>
-        </form>
-      </div>
-      <div id='output'>
-        <p>Place to output queries</p>
-      </div>
-      <div id='footer'> <!-- Footer -->
-        <p>This is the bottom</p>
-      </div>
+      </form>
+    </div>
+    <!--
+    <div id='output'>
+      <p>Place to output queries</p>
+    </div>
+    -->
+    <div id='footer'> <!-- Footer -->
+      <p>This is the bottom</p>
     </div>
   </body>
 
