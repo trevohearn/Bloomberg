@@ -7,6 +7,11 @@ body {
   overflow : auto;
 }
 
+a {
+    border-style : solid;
+    border-color : green;
+}
+
 .btns_topnav {
   overflow : auto;
   float : left;
@@ -18,9 +23,7 @@ body {
 }
 
 /* force images to be small */
-.topnav_images {
-  width: 2em;
-  height: 2em;
+.topnav_images  {
 }
 
 img {
