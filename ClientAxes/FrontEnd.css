@@ -17,6 +17,17 @@ body {
   color : green;
 }
 
+/* force images to be small */
+.topnav_images {
+  width: 2em;
+  height: 2em;
+}
+
+img {
+  width : 2em;
+  height : 2em;
+}
+
 #btn_submit {
   margin : 20px;
   margin-left : 0px;
