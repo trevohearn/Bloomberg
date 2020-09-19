@@ -18,14 +18,14 @@ a {
   border : none;
   display : block;
   padding : 10px;
-  padding-left : 10%;
+/*  padding-left : 10%; */
   color : green;
 }
 
 /* force images to be small */
 .topnav_images  {
 }
-
+/* images don't work */
 img {
   width : 2em;
   height : 2em;
@@ -53,7 +53,7 @@ h1 {
   width : 100%;
   */
 }
-
+/* add area for showing clients */
 #middle {
   /*margin-left : 200px;*/
   background-color : #6497b1;
