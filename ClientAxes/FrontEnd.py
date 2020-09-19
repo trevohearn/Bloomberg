@@ -18,7 +18,11 @@ from dash.dependencies import Input, Output
 
 app = dash.Dash(__name__)
 
+#link frontend.css through components
+
 app.layout = html.Div([ #main container
+    #frontend.html style sheets link
+    dcc.Link(href='FrontEnd.css') #help(dash_core_components.Link)
     #top
     html.Div([html.H2('Client Requested Axes',
                 style={
